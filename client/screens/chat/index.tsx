@@ -247,7 +247,7 @@ export default function ChatScreen() {
               onPress={() => handleSuggestionPress(item.text)}
             >
               <ThemedText variant="small" style={styles.suggestionText}>
-                什么是人工智能？
+                {item.text}
               </ThemedText>
             </TouchableOpacity>
           );
