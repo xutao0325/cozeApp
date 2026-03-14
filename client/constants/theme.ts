@@ -1,35 +1,35 @@
 export const Colors = {
   light: {
-    textPrimary: "#2D3436",
-    textSecondary: "#636E72",
-    textMuted: "#B2BEC3",
-    primary: "#6C63FF", // 薰衣草紫 - AI 工具风格主色
-    accent: "#FF6584", // 珊瑚粉 - 辅助色
-    success: "#00B894",
-    error: "#FF6B6B",
-    backgroundRoot: "#F0F0F3", // 暖灰白背景
-    backgroundDefault: "#F0F0F3", // 卡片与背景同色靠阴影区分
-    backgroundTertiary: "#E8E8EB", // 凹陷面颜色
+    textPrimary: "#1F2937",
+    textSecondary: "#6B7280",
+    textMuted: "#9CA3AF",
+    primary: "#00B4D8", // 明亮天蓝色 - 活泼清新
+    accent: "#FF6B9D", // 明亮粉红 - 辅助色
+    success: "#10B981",
+    error: "#EF4444",
+    backgroundRoot: "#F8FAFC", // 明亮白底
+    backgroundDefault: "#FFFFFF", // 纯白卡片
+    backgroundTertiary: "#F1F5F9", // 浅灰输入框背景
     buttonPrimaryText: "#FFFFFF",
-    tabIconSelected: "#6C63FF",
-    border: "#D1D9E6",
-    borderLight: "rgba(255,255,255,0.6)",
+    tabIconSelected: "#00B4D8",
+    border: "#E2E8F0",
+    borderLight: "#F1F5F9",
   },
   dark: {
-    textPrimary: "#FAFAF9",
-    textSecondary: "#A8A29E",
-    textMuted: "#6F767E",
-    primary: "#8B7FFF", // 暗色模式薰衣草紫
-    accent: "#FF8A9B", // 暗色模式珊瑚粉
+    textPrimary: "#F9FAFB",
+    textSecondary: "#D1D5DB",
+    textMuted: "#9CA3AF",
+    primary: "#38BDF8", // 暗色模式明亮蓝
+    accent: "#F472B6", // 暗色模式粉红
     success: "#34D399",
     error: "#F87171",
-    backgroundRoot: "#1A1A2E", // 深空暗底
-    backgroundDefault: "#1F1F38",
-    backgroundTertiary: "#2D2D52",
+    backgroundRoot: "#0F172A", // 深蓝暗底
+    backgroundDefault: "#1E293B",
+    backgroundTertiary: "#334155",
     buttonPrimaryText: "#FFFFFF",
-    tabIconSelected: "#8B7FFF",
-    border: "#3F3F46",
-    borderLight: "#27272A",
+    tabIconSelected: "#38BDF8",
+    border: "#334155",
+    borderLight: "#1E293B",
   },
 };
 
