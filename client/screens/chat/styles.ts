@@ -159,6 +159,7 @@ export const createStyles = (theme: Theme) => {
       textAlign: 'center',
     },
     welcomeCard: {
+      width: '60%',
       backgroundColor: theme.backgroundDefault,
       borderRadius: BorderRadius['2xl'],
       padding: Spacing.xl,

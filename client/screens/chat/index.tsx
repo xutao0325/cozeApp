@@ -218,56 +218,40 @@ export default function ChatScreen() {
     );
   }, [styles, theme]);
 
+  const questionList = [
+    { text: '什么是人工智能？' },
+    { text: '今天天气如何？' },
+    { text: '当前股市情况？' },
+  ];
   // Render empty state
   const renderEmptyState = () => (
     <View style={styles.emptyState}>
       <View style={styles.emptyIcon}>
         <FontAwesome6 name="robot" size={36} color={theme.primary} />
       </View>
-      <ThemedText variant="h3" style={styles.emptyTitle}>
-        AI 智能助手
-      </ThemedText>
+      {/* <ThemedText variant="h3" style={styles.emptyTitle}>
+        XT的demo
+      </ThemedText> */}
       <ThemedText variant="body" color={theme.textSecondary} style={styles.emptySubtitle}>
-        有什么可以帮您的吗？输入问题开始对话吧！
+        嗨，我是T，有不会的问题就问我吧！
       </ThemedText>
-
+      <ThemedText variant="title" style={styles.suggestionTitle}>
+        试试这些问题
+      </ThemedText>
       <View style={styles.welcomeCard}>
-        <ThemedText variant="title" style={styles.suggestionTitle}>
-          试试这些问题
-        </ThemedText>
-        <TouchableOpacity
-          style={styles.suggestionItem}
-          onPress={() => handleSuggestionPress('什么是人工智能？')}
-        >
-          <View style={styles.suggestionIcon}>
-            <FontAwesome6 name="lightbulb" size={18} color={theme.primary} />
-          </View>
-          <ThemedText variant="small" style={styles.suggestionText}>
-            什么是人工智能？
-          </ThemedText>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.suggestionItem}
-          onPress={() => handleSuggestionPress('请用 JavaScript 写一个冒泡排序算法')}
-        >
-          <View style={styles.suggestionIcon}>
-            <FontAwesome6 name="code" size={18} color={theme.primary} />
-          </View>
-          <ThemedText variant="small" style={styles.suggestionText}>
-            请用 JavaScript 写一个冒泡排序算法
-          </ThemedText>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.suggestionItem}
-          onPress={() => handleSuggestionPress('给我讲一个有趣的小故事')}
-        >
-          <View style={styles.suggestionIcon}>
-            <FontAwesome6 name="book-open" size={18} color={theme.primary} />
-          </View>
-          <ThemedText variant="small" style={styles.suggestionText}>
-            给我讲一个有趣的小故事
-          </ThemedText>
-        </TouchableOpacity>
+        { questionList.map(item => {
+          return (
+            <TouchableOpacity
+              key={Math.random()}
+              style={styles.suggestionItem}
+              onPress={() => handleSuggestionPress(item.text)}
+            >
+              <ThemedText variant="small" style={styles.suggestionText}>
+                什么是人工智能？
+              </ThemedText>
+            </TouchableOpacity>
+          );
+        }) }
       </View>
     </View>
   );
@@ -281,10 +265,10 @@ export default function ChatScreen() {
         {/* Header */}
         <ThemedView level="root" style={styles.header}>
           <ThemedText variant="h3" style={styles.headerTitle}>
-            AI 问答
+            T，你身边的服务专家
           </ThemedText>
           <ThemedText variant="small" style={styles.headerSubtitle}>
-            基于大语言模型的智能助手
+            xt的智能助手
           </ThemedText>
         </ThemedView>
 
