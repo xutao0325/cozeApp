@@ -220,8 +220,8 @@ export default function ChatScreen() {
 
   const questionList = [
     { text: '什么是人工智能？' },
-    { text: '今天天气如何？' },
-    { text: '当前股市情况？' },
+    { text: '什么是勾股定理？' },
+    { text: '推荐几部好看的电影' },
   ];
   // Render empty state
   const renderEmptyState = () => (
