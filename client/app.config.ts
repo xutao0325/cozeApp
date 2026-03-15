@@ -7,7 +7,7 @@ const slugAppName = projectId ? `app${projectId}` : 'myapp';
 export default ({ config }: ConfigContext): ExpoConfig => {
   return {
     ...config,
-    "name": appName,
+    "name": "T",
     "slug": slugAppName,
     "version": "1.0.0",
     "orientation": "portrait",
