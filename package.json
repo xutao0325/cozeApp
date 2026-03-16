@@ -3,13 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "bash .cozeproj/scripts/dev_run.sh",
-    "build": "bash .cozeproj/scripts/prod_build.sh",
-    "start": "bash .cozeproj/scripts/prod_run.sh",
+    "dev": "concurrently \"pnpm --filter server dev\" \"pnpm --filter client start\"",
+    "dev:server": "pnpm --filter server dev",
+    "dev:client": "pnpm --filter client start",
+    "build": "pnpm --filter client build",
+    "start": "concurrently \"pnpm --filter server start\" \"pnpm --filter client start\"",
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
   "packageManager": "pnpm@9.0.0",
   "engines": {
     "pnpm": ">=9.0.0"
